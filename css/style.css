@@ -2,7 +2,7 @@
   --white-color: #ffffff;
   --blue-color: #03a9f4;
   --main-color: #626262;
-  --light-grey-color:#b4ad9e;
+  --light-grey-color: #b4ad9e;
   --primary-font-stack: "Playfair Display", serif;
   --signature-font: "Ubuntu", sans-serif;
 }
@@ -23,21 +23,24 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 900px;
   margin: 0 auto;
-  padding: 0 150px;
+  padding: 0;
 }
-
 
 /* TYPOGRAPHY */
 
+.menu-section {
+  padding-bottom: 70px;
+}
+
 .photo-caption {
- font-size: 14px;
- color: var(--light-grey-color);
- font-family: var(--signature-font);
- text-transform: uppercase;
- margin-top: 0;
- margin-bottom: 28px;
+  font-size: 14px;
+  color: var(--light-grey-color);
+  font-family: var(--signature-font);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .site-menu-title {
@@ -49,7 +52,6 @@ body {
 }
 
 .site-menu-paragraph {
-  display: block;
   font-size: 14px;
   line-height: 1.7;
   font-family: var(--primary-font-stack);
@@ -63,8 +65,8 @@ body {
 /* SITE NAVIGATION */
 
 .site-nav {
-  margin-top: 44px;
-  margin-bottom: 72px;
+  padding-top: 44px;
+  padding-bottom: 72px;
 }
 
 .nav-list {
@@ -83,7 +85,6 @@ body {
   font-size: 14px;
   line-height: 1.7;
   padding: 15px 30px;
-
 }
 
 .nav-list-item-link:hover,
@@ -92,10 +93,6 @@ body {
 }
 
 /* SITE MENU */
-
-.menu {
-  margin-bottom: 54px;
-}
 
 .site-menu-list {
   display: flex;
@@ -122,13 +119,14 @@ body {
   margin-right: 60px;
 }
 
-/* BUTTON */
-
-.div-button {
-  display: flex;
-  margin-bottom: 70px;
-  justify-content: center;
+.site-menu-item:nth-last-child(-n + 1) {
+  margin-right: 0;
+  margin-bottom: 0;
+  flex-basis: 0;
+  margin-left: 358px;
 }
+
+/* BUTTON */
 
 .button {
   display: inline-flex;
@@ -137,11 +135,15 @@ body {
   min-width: 164px;
   min-height: 60px;
   margin: 0;
-  padding: 22px 30px 22px 30px;
-  align-items: center;
+  justify-content: center;
   font-family: var(--primary-font-stack);
   font-size: 20px;
   line-height: 1.2;
   color: var(--main-color);
   background-color: var(--white-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--blue-color);
 }
