@@ -123,7 +123,6 @@ body {
 /* BUTTON */
 
 .button {
-  display: inline-flex;
   text-decoration: none;
   border: 1px solid;
   min-width: 164px;
